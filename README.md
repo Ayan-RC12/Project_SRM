@@ -1,5 +1,19 @@
-# Contact Keeper
+## Features
 
+- Login and Sign Up into your account
+- Add new contacts either personal or professional
+- Edit and delete the contacts
+- Get every single contact
+
+# Contact Keeper
+Contact keeper is where you can store you personal and professional contacts in an organized way.
+The newly visiting users have yo first signup for the web app and afterwards when they visit the web app they can simply login.
+
+There are two tabs Contact form and Contacts. In the form the users can add a contact where they have to put the contact details such as the name, phone number, email address and they have to specify if it is a personal or a professional contact. After adding a contact/contacts they can view them in Contacts tab where all added contacts are laid down. 
+
+A user can add as many contants as he wants but if he wants to view a perticular contact the can filter them out by the simply searching the contacts by name or email or by their phone number.
+
+# Problems We Are Trying To Solve  
 To summarize the issues we faced in the peoject, and why we had to use `// eslint-disable-next-line` at all is that all our data fetching methods are in our context states (AuthState.js and ContactState.js) and passed down to all our components via the context Provider. The problem with this is that every time we update our context state we create a new function. If we include these functions in our useEffect dependency array (as the linter suggests) then each time we fetch data and our reducer runs it updates the context which triggers a re-render (creating a whole set of new functions). The useEffect dependency sees it as a new function and triggers another render which again updates the state when we call the function in our useEffect, which triggers another re-render and so on.... infinite loop of re-rendering.
 Even though these functions are called the same and do the same thing, in memory
 they are different functions.

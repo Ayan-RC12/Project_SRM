@@ -63,12 +63,19 @@ useEffect(() => {
 }, [contactDispatch]);
 ```
 
-You'll note that we did not need to include `getContacts` in our dependency array and we get no warnings now. We don't need to include `getContacts` as it doesn't change, it's the same function used every time.
-
 Ultimately a good rule of thumb when using react context along with hooks would be to not provide functions in your context state, especially if those functions have side effects. The only exception being the dispatch returned from useReducer.
 
 ### LOGIN PAGE
 <img src="./screnshots/LOgin.png"/>
+
+### REGISTRATION PAGE
+<img src="./screnshots/Registration.png"/>
+
+### CONTACT FORM
+<img src="./screnshots/Screenshot 2022-05-08 141934.png"/>
+
+### CONTACTS
+<img src="./screnshots/contacts.png"/>
 
 ## Postman Routes
 
